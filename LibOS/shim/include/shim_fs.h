@@ -326,7 +326,7 @@ int check_permissions(struct shim_dentry* dent, mode_t mask);
  * \param flags lookup flags (see description below)
  * \param[out] found pointer to retrieved dentry
  *
- * The caller should hold `g_dcache_lock`. If you do not already need to hold `g_dcache_lock`, use
+ * The caller should hold `g_dcache_lock`. If you do not already hold `g_dcache_lock`, use
  * `path_lookupat` instead.
  *
  * On success, returns 0, and puts the retrieved dentry in `*found`. The reference count of the
